@@ -1,16 +1,13 @@
-import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [name, setName] = useState("Javascript Developer");
-  const [age, setAge] = useState(45);
-  return (
-    <div className="App">
-      Gautham
-      {name}
-      <div>{age}</div>
-    </div>
-  );
+  return <div className="App">Gautham</div>;
 }
 
 export default App;
+
+// Class Components
+// Functional Components ---> 
+// React Hooks useState, useEffect, 
+// useSelector, useContext,
+// useReducer, useRef, useMemo
