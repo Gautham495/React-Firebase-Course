@@ -24,6 +24,12 @@ function App() {
 
   const [objects, setObjects] = useState({ name: "lion" });
 
+
+  const[arrobj,setArrobj] = useState([{name: "lion"},{name: "lion"},{ name: "lion"},{ name: "lion"}])
+
+  // map filter sort reduce
+
+
   // Objects --> { name : "Tiger", age : 30 }
   // key     // value
 
