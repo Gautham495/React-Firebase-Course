@@ -30,11 +30,16 @@ function App() {
 
   function Change() {}
 
-  const arrowFunction = () => {};
+  const arrowFunction = () => {
+    if (isDifficult) {
+    }
+
+    // isAuthenticated  false --> true
+  };
 
   return (
     <div className="App">
-      Name :  {name}
+      Name : {name}
       <div>{age}</div>
       <button onClick={() => setName("React JS Developer")}>Change Name</button>
       <input
@@ -43,8 +48,16 @@ function App() {
         value={name}
         onChange={(event) => setName(event.target.value)}
       ></input>
+      <button onClick={() => setIsDifficult(!isDifficult)}> Change Difficulty </button>
+      {isDifficult ? (
+        <div> Its really Difficult </div>
+      ) : (
+        <div> Its not really that difficult </div>
+      )}
     </div>
   );
 }
 
 export default App;
+
+// false --> true  true ---> false 
