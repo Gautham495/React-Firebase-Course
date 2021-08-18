@@ -18,6 +18,8 @@ function App() {
 
   const [isDifficult, setIsDifficult] = useState(false);
 
+  const[onlyTrue, setOnlyTrue] = useState(true)
+
   const [array, setArray] = useState(["1", "2", "3"]);
 
   const [objects, setObjects] = useState({ name: "lion" });
@@ -54,6 +56,9 @@ function App() {
       ) : (
         <div> Its not really that difficult </div>
       )}
+
+        {onlyTrue  && (<div>It is really true</div> )  }
+
     </div>
   );
 }
