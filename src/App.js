@@ -21,6 +21,9 @@ function App() {
 
   const [objects, setObjects] = useState({ name: "lion" });
 
+  // Objects --> { name : "Tiger", age : 30          }  
+                  // key     // value
+
   return (
     <div className="App">
       Gautham
