@@ -34,10 +34,15 @@ function App() {
 
   return (
     <div className="App">
-      
-      {name}
+      Name :  {name}
       <div>{age}</div>
       <button onClick={() => setName("React JS Developer")}>Change Name</button>
+      <input
+        type="text"
+        placeholder="Name"
+        value={name}
+        onChange={(event) => setName(event.target.value)}
+      ></input>
     </div>
   );
 }
