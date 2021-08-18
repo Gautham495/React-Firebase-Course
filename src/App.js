@@ -13,6 +13,7 @@ function App() {
   // States in React is immutable
 
   const [name, setName] = useState("Javascript Developer");
+
   const [age, setAge] = useState(45);
 
   const [isDifficult, setIsDifficult] = useState(false);
@@ -21,14 +22,22 @@ function App() {
 
   const [objects, setObjects] = useState({ name: "lion" });
 
-  // Objects --> { name : "Tiger", age : 30 }  
-                  // key     // value
+  // Objects --> { name : "Tiger", age : 30 }
+  // key     // value
+
+  // 1. onClick
+  // 2. onChange
+
+  function Change() {}
+
+  const arrowFunction = () => {};
 
   return (
     <div className="App">
-      Gautham
+      
       {name}
       <div>{age}</div>
+      <button onClick={() => setName("React JS Developer")}>Change Name</button>
     </div>
   );
 }
