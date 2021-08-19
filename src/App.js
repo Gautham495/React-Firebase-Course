@@ -18,17 +18,25 @@ function App() {
 
   const [isDifficult, setIsDifficult] = useState(false);
 
-  const[onlyTrue, setOnlyTrue] = useState(true)
+  const [onlyTrue, setOnlyTrue] = useState(true);
 
   const [array, setArray] = useState(["1", "2", "3"]);
 
   const [objects, setObjects] = useState({ name: "lion" });
 
+  const [arrobj, setArrobj] = useState([
+    
+    { name: "lion" },
+    { name: "tiger" },
+    { name: "fish" },
+    { name: "bird" },
+    { name: "spaceship" },
 
-  const[arrobj,setArrobj] = useState([{name: "lion"},{name: "lion"},{ name: "lion"},{ name: "lion"}])
+  ]);
+
+  // Map functions is only used for arrays not for any other data types like objects
 
   // map filter sort reduce
-
 
   // Objects --> { name : "Tiger", age : 30 }
   // key     // value
@@ -56,19 +64,29 @@ function App() {
         value={name}
         onChange={(event) => setName(event.target.value)}
       ></input>
-      <button onClick={() => setIsDifficult(!isDifficult)}> Change Difficulty </button>
+      <button onClick={() => setIsDifficult(!isDifficult)}>
+        {" "}
+        Change Difficulty{" "}
+      </button>
       {isDifficult ? (
         <div> Its really Difficult </div>
       ) : (
         <div> Its not really that difficult </div>
       )}
-
-        {onlyTrue  && (<div>It is really true</div> )  }
-
+      {onlyTrue && <div>It is really true</div>}
+      <div>
+        {arrobj.map((activity) => {
+          return (
+            <div>
+              <div>{activity.name}</div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
 
 export default App;
 
-// false --> true  true ---> false 
+// false --> true  true ---> false
