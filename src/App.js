@@ -25,13 +25,11 @@ function App() {
   const [objects, setObjects] = useState({ name: "lion" });
 
   const [arrobj, setArrobj] = useState([
-    
-    { name: "lion" },
-    { name: "tiger" },
-    { name: "fish" },
-    { name: "bird" },
-    { name: "spaceship" },
-
+    { name: "lion", id: 1 },
+    { name: "tiger", id: 2 },
+    { name: "fish", id: 3 },
+    { name: "bird", id: 4 },
+    { name: "spaceship", id: 5 },
   ]);
 
   // Map functions is only used for arrays not for any other data types like objects
@@ -77,7 +75,7 @@ function App() {
       <div>
         {arrobj.map((activity) => {
           return (
-            <div>
+            <div key={activity.id}>
               <div>{activity.name}</div>
             </div>
           );
