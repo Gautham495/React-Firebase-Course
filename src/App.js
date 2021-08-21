@@ -88,3 +88,6 @@ function App() {
 export default App;
 
 // false --> true  true ---> false
+
+
+// images, api files, components, styles
