@@ -32,3 +32,11 @@ function App() {
 }
 
 export default App;
+
+
+// Props
+// Child Components
+// State
+// onChange onClick
+// useState
+// useEffect
