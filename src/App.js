@@ -4,13 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './Home'
 import About from './About'
 import Contact from './Contact'
-
+import Firestore from './Components/Firestore'
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Firestore />
         </Route>
         <Route exact path="/about">
           <About />
