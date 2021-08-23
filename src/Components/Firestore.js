@@ -5,7 +5,9 @@ import {db} from '../Firebase'
 const Firestore = () => {
   const getData = async () => {
     const names = await db.collection("names").get();
-    console.log(names);
+    names.forEach((doc) => {
+      console.log(doc.id, '=>', doc.data());
+    });
   };
 
   useEffect(() => {
