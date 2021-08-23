@@ -61,3 +61,6 @@ const Firestore = () => {
 };
 
 export default Firestore;
+
+// google oauth --> displayName email 
+// onAuthChanged
