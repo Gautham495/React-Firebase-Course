@@ -4,6 +4,19 @@ import { db } from "../Firebase";
 
 const Firestore = () => {
   const [nameData, setNameData] = useState([]);
+  const [firestoreData, setFirestoreData] = useState("");
+
+  const firestoreChange = (e) => {
+    setFirestoreData(e.target.value);
+  };
+
+  const onSubmit = async () => {
+
+    const addData = await db.collection("names").add({ name: firestoreData });
+
+    setFirestoreData("");
+    
+  };
 
   const getData = async () => {
     let nameArray = [];
@@ -27,6 +40,15 @@ const Firestore = () => {
   return (
     <div>
       Firebase Firestore Example
+      <div>
+        <input
+          type="text"
+          value={firestoreData}
+          onChange={(e) => firestoreChange(e)}
+          placeholder="Name"
+        ></input>
+        <button onClick={onSubmit}>Submit</button>
+      </div>
       <div>
         {nameData.map((doc) => {
           return <div>{doc.name}</div>;
