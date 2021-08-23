@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "firebase/firestore";
 import { db } from "../Firebase";
+import Login from '../Login'
 
 const Firestore = () => {
   const [nameData, setNameData] = useState([]);
@@ -15,7 +16,7 @@ const Firestore = () => {
     const addData = await db.collection("names").add({ name: firestoreData });
 
     setFirestoreData("");
-    
+
   };
 
   const getData = async () => {
@@ -54,6 +55,7 @@ const Firestore = () => {
           return <div>{doc.name}</div>;
         })}{" "}
       </div>
+      <Login/>
     </div>
   );
 };
