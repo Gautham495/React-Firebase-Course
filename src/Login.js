@@ -58,3 +58,5 @@ export default Login;
 // onAuthChanged
 // Signup
 // Login
+
+//  firebase.auth().signOut();
