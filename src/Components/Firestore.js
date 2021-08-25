@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "firebase/firestore";
 import { db } from "../Firebase";
 import Login from '../Login'
-
+import Storage from './Storage'
 const Firestore = () => {
   const [nameData, setNameData] = useState([]);
   const [firestoreData, setFirestoreData] = useState("");
@@ -56,6 +56,7 @@ const Firestore = () => {
         })}{" "}
       </div>
       <Login/>
+      <Storage/>
     </div>
   );
 };

@@ -19,7 +19,7 @@ const Login = () => {
         const snapShot = await userReference.get();
       
         if (snapShot.exists) {
-            alert("User Exists")
+            console.log("User Exists")
         }
       
         if (!snapShot.exists) {
@@ -44,11 +44,18 @@ const Login = () => {
       
       useEffect(() => {
         auth.onAuthStateChanged(onAuthStateChanged)
+        console.log(user, "Authentication State Changed")
       }, [user]);
       
+const firebaseLogout = () =>{
+ firebase.auth().signOut();
+}
+
+
   return (
     <div>
       <button onClick={signInWithGoogle}> Sign In With Google </button>
+      <button onClick={()=>firebaseLogout()}> Logout </button>
     </div>
   );
 };
