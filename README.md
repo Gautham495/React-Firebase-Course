@@ -6,9 +6,12 @@ This repository contains all the code used in the udemy course and the best part
 
 Links used in the video : 
 
-https://reactjs.org/
+Node JS Installation : https://nodejs.org/en/
 
-https://firebase.google.com/
+React Docs : https://reactjs.org/
+
+Firebase : https://firebase.google.com/
+
 
 I hope you liked the course and you will be intrested in purchasing my other courses in udemy as well.
 
